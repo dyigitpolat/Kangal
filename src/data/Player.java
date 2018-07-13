@@ -1,24 +1,36 @@
 package data;
 
-import java.util.Date;
+import java.time.LocalDate;
 
-enum Nationality 
-{
-	TURKEY, GERMANY, ENGLAND;
-}
 
 public class Player {
+	
 	private String name;
 	private Nationality nationality;
-	private Date birthday;
-	private Picture picture;
+	private LocalDate birthdate;
+	private KangalPicture picture;
 	
-	public Player(String name, Date bday, Nationality nation)
+	public Player(String name, LocalDate birthdate, Nationality nationality)
 	{
 		picture = null;
 		this.name = name;
-		birthday = bday;
-		nationality = nation;
+		this.birthdate = birthdate;
+		this.nationality = nationality;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	
+	public Nationality getNationality()
+	{
+		return nationality;
+	}
+	
+	public LocalDate getBirthdate()
+	{
+		return birthdate;
 	}
 }
 

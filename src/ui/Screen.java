@@ -21,7 +21,6 @@ public class Screen extends JFrame{
 
 		//add default scene
 		setScene(new Scene());
-		setScene(new Scene());
 
 		//show
 		setVisible( true);
@@ -39,9 +38,9 @@ public class Screen extends JFrame{
 	
 	public void setScene(Scene s) {
 		scene = s;
-		
-		if(this.getComponents().length > 1) remove(1);
-		add(scene);
+		getContentPane().removeAll();
+		getContentPane().add(s);
+		render();
 	}
 	
 	public void render() {

@@ -9,4 +9,9 @@ public class Scene extends JPanel {
 		//properties
 		setBackground( Color.black);
 	}
+	
+	public void render() {
+		validate();
+		repaint();
+	}
 }
