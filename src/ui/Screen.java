@@ -3,21 +3,23 @@ package ui;
 import java.awt.Color;
 import javax.swing.*;
 
-public class Screen extends JFrame{
+public class Screen extends JFrame implements Renderable {
 	private int width;
 	private int height;
 	private Scene scene;
+	private RenderBehaviour rb;
 	
 	public Screen( String title) {
 		//init
 		super( title);
 		width = 800;
 		height = 600;
+		rb = new RenderBehaviour();
 		
 		//frame properties
 		//800x600, centered
-		setSize( width, height); 
-		setLocationRelativeTo( null); //center frame
+		setWindowSize( width, height); 
+		setResizable(false);
 
 		//add default scene
 		setScene(new Scene());
@@ -28,7 +30,7 @@ public class Screen extends JFrame{
 		render();
 	}
 	
-	public void setSize(int w, int h) {
+	public void setWindowSize(int w, int h) {
 		width = w;
 		height = h;
 		super.setSize( width, height); 
@@ -44,8 +46,7 @@ public class Screen extends JFrame{
 	}
 	
 	public void render() {
-		validate();
-		repaint();
+		rb.perform( this);
 	}
 	
 }

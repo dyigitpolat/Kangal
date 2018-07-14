@@ -2,16 +2,17 @@ package ui;
 
 import java.awt.Color;
 
-import javax.swing.*;
+import javax.swing.JPanel;
 
-public class Scene extends JPanel implements Renderable {
-	
+//our UI Panels should inherit from this class.
+public class KangalPanel extends JPanel implements Renderable {
+
 	private RenderBehaviour rb;
 	
-	public Scene() {
+	public KangalPanel() {
 		//init
 		rb = new RenderBehaviour();
-
+		
 		//properties
 		setBackground( Color.black);
 	}
@@ -19,4 +20,5 @@ public class Scene extends JPanel implements Renderable {
 	public void render() {
 		rb.perform( this);
 	}
+			
 }
