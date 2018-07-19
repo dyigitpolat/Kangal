@@ -11,7 +11,7 @@ public class DatabaseManager {
 		cb.perform( p);
 	}
 	
-	public <T> List<Player> searchPlayer( String field, Object value, SearchOperator op) {
+	public List<Player> searchPlayer( String field, Object value, SearchOperator op) {
 		try {
 			return sb.perform(field, value, op);
 		} catch (IllegalArgumentException e) {
