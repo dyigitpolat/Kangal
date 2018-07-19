@@ -6,6 +6,13 @@ public class DatabaseManager {
 	
 	private CreateBehaviour cb;
 	private SearchBehaviour sb;
+	private LoadBehaviour lb;
+	
+	public DatabaseManager() {
+		cb = new CreateBehaviour(this);
+		sb = new SearchBehaviour(this);
+		lb = new LoadBehaviour(this);
+	}
 	
 	public void createPlayer( Player p) {
 		cb.perform( p);
@@ -18,6 +25,12 @@ public class DatabaseManager {
 			e.printStackTrace();
 		}
 		
+		return null;
+	}
+	
+	public List<Player> loadPlayers( String s)
+	{
+		lb.perform(s);
 		return null;
 	}
 }

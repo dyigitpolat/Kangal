@@ -1,7 +1,7 @@
 package data;
 
+import java.lang.reflect.Field;
 import java.time.LocalDate;
-
 
 public class Player {
 	
@@ -36,6 +36,25 @@ public class Player {
 	
 	public void setPicture( KangalPicture picture) {
 		this.picture = picture;
+	}
+	
+	public String toString() {
+		String str = "";
+		str += "type: generic";
+		str += " , ";
+		str += "name: " + name;
+		str += " , ";
+		str += "nationality: " + nationality;
+		str += " , ";
+		str += "birthdate: " + birthdate;
+		str += " , ";
+		if(picture != null)
+			str += "picture: " + picture.getPath();
+		else
+			str += "picture: null";
+		str += "";
+		
+		return str;
 	}
 }
 
