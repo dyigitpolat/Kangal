@@ -1,13 +1,9 @@
 import java.time.LocalDate;
 import java.time.Month;
 
-import data.DatabaseManager;
-import data.KangalPicture;
-import data.Player;
-import data.Nationality;
+import data.*;
 
-import ui.ProfileScene;
-import ui.Screen;
+import ui.*;
 
 public class Kangal {
 
@@ -27,7 +23,10 @@ public class Kangal {
 		//initialize ui screen
 		Screen s = new Screen("Kangal Stat Keeper");
 		//set current scene of the screen
-		s.setScene(new ProfileScene(p)); //generate profile scene of Robinho
+		LoginScene ls = new LoginScene(s);
+		ProfileScene ps = new ProfileScene(s, p);
+		ls.setNext(ps);
+		s.setScene(ls); //generate profile scene of Robinho
 		
 		
 	}

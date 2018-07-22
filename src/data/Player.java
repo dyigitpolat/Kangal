@@ -1,5 +1,6 @@
 package data;
 
+import java.io.Serializable;
 import java.lang.reflect.Field;
 import java.time.LocalDate;
 
@@ -9,6 +10,7 @@ public class Player {
 	private Nationality nationality;
 	private LocalDate birthdate;
 	private KangalPicture picture;
+	private PlayerStats ps;
 	
 	public Player(String name, LocalDate birthdate, Nationality nationality) {
 		//init player with provided data
@@ -16,6 +18,7 @@ public class Player {
 		this.name = name;
 		this.birthdate = birthdate;
 		this.nationality = nationality;
+		ps = new PlayerStats();
 	}
 	
 	public String getName() {
@@ -36,6 +39,10 @@ public class Player {
 	
 	public void setPicture( KangalPicture picture) {
 		this.picture = picture;
+	}
+	
+	public PlayerStats getPlayerStats() {
+		return ps;
 	}
 	
 	public String toString() {

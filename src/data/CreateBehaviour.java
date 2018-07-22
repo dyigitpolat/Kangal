@@ -1,5 +1,11 @@
 package data;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.lang.reflect.Field;
 
 public class CreateBehaviour {
@@ -10,9 +16,7 @@ public class CreateBehaviour {
 	}
 	
 	public void perform( Player p) {
-		//TODO: generic implementation
-		System.out.println("user creation init..");
-		System.out.println(p);
+		
 		
 	}
 }

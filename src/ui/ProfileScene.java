@@ -15,10 +15,12 @@ public class ProfileScene extends Scene {
 	IDPanel idp;
 	
 	//generic profile scene setup
-	public ProfileScene( Player p) {
+	public ProfileScene( Screen scr, Player p) {
 		//init
+		super(scr);
 		player = p;
 		add(new IDPanel(p));
+		add(new PlayerStatsPanel(p));
 		render();
 	}
 }

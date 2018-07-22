@@ -22,7 +22,7 @@ public class Screen extends JFrame implements Renderable {
 		setResizable(false);
 
 		//add default scene
-		setScene(new Scene());
+		setScene(new Scene(this));
 
 		//show
 		setVisible( true);
