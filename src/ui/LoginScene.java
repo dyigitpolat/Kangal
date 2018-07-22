@@ -6,6 +6,7 @@ public class LoginScene extends Scene {
 	
 	public LoginScene(Screen scr) {
 		super(scr);
+		add(new LogoPanel());
 		add(new LoginPanel(this));
 		// TODO Auto-generated constructor stub
 	}
