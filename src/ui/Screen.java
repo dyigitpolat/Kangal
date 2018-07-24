@@ -27,6 +27,7 @@ public class Screen extends JFrame implements Renderable {
 		//show
 		setVisible( true);
 		setEnabled( true);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		render();
 	}
 	
