@@ -7,7 +7,10 @@ public class SearchScene extends Scene {
 	
 	public SearchScene(Screen scr) {
 		super(scr);
+		add( new SearchBarPanel());
 		// TODO Auto-generated constructor stub
+		
+		render();
 	}
 
 }

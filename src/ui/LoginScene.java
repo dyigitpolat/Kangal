@@ -3,12 +3,24 @@ package ui;
 public class LoginScene extends Scene {
 
 	Scene nextScn;
+	LogoPanel logoPanel;
+	LoginPanel loginPanel;
 	
 	public LoginScene(Screen scr) {
 		super(scr);
-		add(new LogoPanel());
-		add(new LoginPanel(this));
+		logoPanel = new LogoPanel();
+		loginPanel = new LoginPanel(this);
+		add(logoPanel);
+		add(loginPanel);
 		// TODO Auto-generated constructor stub
+	}
+	
+	public void setLogoPanel( LogoPanel logoPanel) {
+		removeAll();
+		this.logoPanel = logoPanel;
+		add(logoPanel);
+		add(loginPanel);
+		
 	}
 	
 	public void tryLogin(String user, String pass) {

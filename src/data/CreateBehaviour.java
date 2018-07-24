@@ -19,4 +19,19 @@ public class CreateBehaviour {
 		
 		
 	}
+
+	public void perform( SoccerPlayer p) {
+		
+		
+	}
+
+	public void perform( TennisPlayer p) {
+		
+		
+	}
+	
+	public void perform( BasketballPlayer p) {
+		
+		
+	}
 }
