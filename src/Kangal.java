@@ -29,7 +29,7 @@ public class Kangal {
 		s.setScene(ls); //generate profile scene of Robinho
 		
 		Screen s2 = new Screen("Search");
-		s2.setScene(new SearchScene(s2));
+		s2.setScene(new SearchScene(dbm, s2));
 		
 		Screen s3 = new Screen("soccer");
 		s3.setScene(new SoccerLoginScene(s3));
