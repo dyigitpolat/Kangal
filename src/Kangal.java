@@ -31,9 +31,14 @@ public class Kangal {
 		Screen s2 = new Screen("Search");
 		s2.setScene(new SearchScene(dbm, s2));
 		
-		Screen s3 = new Screen("soccer");
+		Screen s3 = new Screen("Soccer");
 		s3.setScene(new SoccerLoginScene(s3));
 		
+		Screen s4 = new Screen("Basketball");
+		s4.setScene(new BasketballLoginScene(s4));
+		
+		Screen s5 = new Screen("Tennis");
+		s5.setScene(new TennisLoginScene(s5));
 		
 	}
 
