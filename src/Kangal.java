@@ -34,7 +34,7 @@ public class Kangal {
 		
 		Screen s3 = new Screen("soccer");
 		s3.setScene(new SoccerLoginScene(s3));
-		*/
+		test*/
 		
 		Screen s4 = new Screen("detail");
 		s4.setScene(ds);
