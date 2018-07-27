@@ -12,7 +12,7 @@ public class Kangal {
 	 */
 	public static void main(String[] args) {
 		//create new player entity
-		Player p = new Player("Robinho", LocalDate.of(1980, Month.JANUARY, 25), Nationality.TURKEY);
+		SoccerPlayer p = new SoccerPlayer("Robinho", LocalDate.of(1980, Month.JANUARY, 25), Nationality.TURKEY);
 		
 		//set profile picture for the player
 		p.setPicture( new KangalPicture("image.jpeg")); //create a KangalPicture instance from image path
@@ -25,15 +25,18 @@ public class Kangal {
 		//set current scene of the screen
 		LoginScene ls = new LoginScene(s);
 		ProfileScene ps = new ProfileScene(s, p);
-		ls.setNext(ps);
+		DetailScene ds = new DetailScene(s, p);
+		/*ls.setNext(ps);
 		s.setScene(ls); //generate profile scene of Robinho
 		
 		Screen s2 = new Screen("Search");
 		s2.setScene(new SearchScene(dbm, s2));
 		
 		Screen s3 = new Screen("soccer");
-		s3.setScene(new SoccerLoginScene(s3));
+		s3.setScene(new SoccerLoginScene(s3));*/
 		
+		Screen s4 = new Screen("detail");
+		s4.setScene(ds);
 		
 	}
 
