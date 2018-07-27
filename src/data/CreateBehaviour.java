@@ -9,10 +9,10 @@ import java.io.ObjectOutputStream;
 import java.lang.reflect.Field;
 
 public class CreateBehaviour {
-	DatabaseManager dbm;
+	Database db;
 	
-	public CreateBehaviour( DatabaseManager dbm) {
-		this.dbm = dbm;
+	public CreateBehaviour( Database db) {
+		this.db = db;
 	}
 	
 	public void perform( Player p) {
