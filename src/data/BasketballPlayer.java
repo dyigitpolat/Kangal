@@ -9,9 +9,9 @@ public class BasketballPlayer extends Player {
 		
 		super(name, birthdate, nationality);
 		bps = new BasketballPlayerStats();
-		
-		
 	}
-	
+	public BasketballPlayerStats getPlayerStats() {
+		return bps;
+	}
 	
 }

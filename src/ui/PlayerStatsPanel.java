@@ -15,15 +15,14 @@ public class PlayerStatsPanel extends KangalPanel {
 	
 	//panel properties
 	int height = 300;
-	int width = 200;
+	int width = 280;
 	
 	public PlayerStatsPanel( Player p) {
 		//init
 		ps = p.getPlayerStats();
 		
-		appearencesLabel = new KangalLabel("Appr:" + ps.getAppearances(), 20);
+		appearencesLabel = new KangalLabel("Appearences:" + ps.getAppearances(), 20);
 		scoresLabel = new KangalLabel("Scores:" + ps.getScores(), 20);
-		
 		//layout
 		setPreferredSize( new Dimension(width, height));
 		
