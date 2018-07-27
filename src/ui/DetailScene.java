@@ -3,6 +3,7 @@ package ui;
 import data.BasketballPlayer;
 import data.Player;
 import data.SoccerPlayer;
+import data.TennisPlayer;
 
 public class DetailScene extends Scene{
 
@@ -22,6 +23,13 @@ public class DetailScene extends Scene{
 		player = p;
 		add(new IDPanel(p));
 		add(new BasketballPlayerStatsPanel(p));
+		// TODO Auto-generated constructor stub
+	}
+	public DetailScene( Screen scr, TennisPlayer p) {
+		super(scr);
+		player = p;
+		add(new IDPanel(p));
+		add(new TennisPlayerStatsPanel(p));
 		// TODO Auto-generated constructor stub
 	}
 	public void setNext( Scene nextScn) {
