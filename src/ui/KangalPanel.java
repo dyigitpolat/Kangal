@@ -16,7 +16,7 @@ public class KangalPanel extends JPanel implements Renderable {
 		
 		//properties
 		setBorder( BorderFactory.createLineBorder(Color.white) );
-		setBackground( Color.black);
+		setBackground( Color.red);
 	}
 	
 	public void render() {

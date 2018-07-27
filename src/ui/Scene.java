@@ -17,7 +17,7 @@ public class Scene extends JPanel implements Renderable {
 		this.scr = scr;
 		
 		//properties
-		setBackground( Color.black);
+		setBackground( Color.red);
 	}
 	
 	public Screen getScreen() {

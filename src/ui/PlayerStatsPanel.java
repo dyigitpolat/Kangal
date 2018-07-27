@@ -15,7 +15,7 @@ public class PlayerStatsPanel extends KangalPanel {
 	
 	//panel properties
 	int height = 300;
-	int width = 220;
+	int width = 280;
 	
 	public PlayerStatsPanel( Player p) {
 		//init
