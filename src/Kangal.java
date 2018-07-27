@@ -11,6 +11,14 @@ public class Kangal {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		try {
+			KangalFactory kf = new KangalFactory("basketball");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
 		//create new player entity
 		SoccerPlayer p = new SoccerPlayer("Robinho", LocalDate.of(1980, Month.JANUARY, 25), Nationality.TURKEY);
 		

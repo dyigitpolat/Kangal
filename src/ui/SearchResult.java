@@ -41,9 +41,10 @@ public class SearchResult extends KangalPanel {
 		add(attribute);
 		
 		setPreferredSize( new Dimension(600, 40));
+		render();
 	}
 	
 	public void playerSelected( Player p) {
-		//parent.playerSelected( Player p);
+		parent.playerSelected( p);
 	}
 }

@@ -19,4 +19,8 @@ public class Database {
 	public void setDatabase( List<Player> list) {
 		listPlayers = list;
 	}
+	
+	public List<Player> getDatabase() {
+		return listPlayers;
+	}
 }

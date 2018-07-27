@@ -10,7 +10,7 @@ public class SearchBehaviour {
 	}
 	
 	public List<Player> perform( String field, int value, SearchOperator op) {
-		return null;
+		return db.getDatabase();
 	}
 	
 }

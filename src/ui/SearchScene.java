@@ -1,6 +1,10 @@
 package ui;
 
+import data.BasketballPlayer;
 import data.DatabaseManager;
+import data.Player;
+import data.SoccerPlayer;
+import data.TennisPlayer;
 
 public class SearchScene extends Scene {
 
@@ -12,15 +16,30 @@ public class SearchScene extends Scene {
 		super(scr);
 		this.dbm = dbm;
 		add( new SearchBarPanel());
-		add( new SearchResultsPanel());
+		add( new SearchResultsPanel(this));
 		
-		// TODO Auto-generated constructor stub
 		
 		render();
 	}
 	
 	public DatabaseManager getDatabaseManager() {
 		return dbm;
+	}
+	
+	public void navigate(Player p) {
+		
+	}
+	
+	public void navigate(SoccerPlayer p) {
+		getScreen().setScene( new DetailScene(getScreen(), p));
+	}
+	
+	public void navigate(TennisPlayer p) {
+		getScreen().setScene( new DetailScene(getScreen(), p));
+	}
+	
+	public void navigate(BasketballPlayer p) {
+		getScreen().setScene( new DetailScene(getScreen(), p));
 	}
 
 }
