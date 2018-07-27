@@ -33,7 +33,8 @@ public class Kangal {
 		s2.setScene(new SearchScene(dbm, s2));
 		
 		Screen s3 = new Screen("soccer");
-		s3.setScene(new SoccerLoginScene(s3));*/
+		s3.setScene(new SoccerLoginScene(s3));
+		*/
 		
 		Screen s4 = new Screen("detail");
 		s4.setScene(ds);
