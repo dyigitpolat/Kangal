@@ -12,6 +12,8 @@ public class SearchScene extends Scene {
 		super(scr);
 		this.dbm = dbm;
 		add( new SearchBarPanel());
+		add( new SearchResultsPanel());
+		
 		// TODO Auto-generated constructor stub
 		
 		render();
