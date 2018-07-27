@@ -28,17 +28,18 @@ public class SearchResult extends KangalPanel {
 		playerName = new KangalLabel(p.getName(), 20);
 		cut = new KangalLabel("|", 40);
 		cut.setBounds(300, 0, 10, 40);
-		playerName = new KangalLabel(attrib, 20);
 		selectButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 playerSelected( p);
             }
         });
+		attribute = new KangalLabel(attrib, 20);
 
 		add(playerName);
 		add(cut);
 		add(attribute);
+		add(selectButton);
 		
 		setPreferredSize( new Dimension(600, 40));
 		render();

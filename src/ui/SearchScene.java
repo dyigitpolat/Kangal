@@ -1,5 +1,6 @@
 package ui;
 
+import data.BasketballDatabase;
 import data.BasketballPlayer;
 import data.DatabaseManager;
 import data.Player;
@@ -27,7 +28,26 @@ public class SearchScene extends Scene {
 	}
 	
 	public void navigate(Player p) {
+		try {
+			navigate( (BasketballPlayer) p);
+			return;
+		} catch( Exception e) {
+			
+		}
 		
+		try {
+			navigate( (SoccerPlayer) p);
+			return;
+		} catch( Exception e) {
+			
+		}
+		
+		try {
+			navigate( (TennisPlayer) p);
+			return;
+		} catch( Exception e) {
+			
+		}
 	}
 	
 	public void navigate(SoccerPlayer p) {

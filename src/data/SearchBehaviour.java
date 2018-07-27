@@ -9,6 +9,7 @@ public class SearchBehaviour {
 		this.db = db;
 	}
 	
+	
 	public List<Player> perform( String field, int value, SearchOperator op) {
 		return db.getDatabase();
 	}

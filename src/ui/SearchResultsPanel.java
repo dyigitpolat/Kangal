@@ -30,7 +30,7 @@ public class SearchResultsPanel extends KangalPanel {
 	
 	public void updateResults() {
 		for( Player p : results) {
-			add( new SearchResult(p, ""+Math.floor(Math.random()*100), this));
+			add( new SearchResult(p, ""+ Math.floor(Math.random()*100), this));
 			System.out.println(p.getName());
 		}
 		render();

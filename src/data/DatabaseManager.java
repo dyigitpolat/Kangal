@@ -30,8 +30,15 @@ public class DatabaseManager {
 		return null;
 	}
 	
-	public void loadPlayers( String s)
+	public void loadPlayers()
 	{
 		lb.perform(db);
+	}
+	
+	public void setDatabase( Database db) {
+		this.db = db;
+		cb = new CreateBehaviour(db);
+		sb = new SearchBehaviour(db);
+		lb = new LoadBehaviour(db);
 	}
 }

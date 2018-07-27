@@ -3,18 +3,22 @@ package ui;
 import java.awt.Color;
 import javax.swing.*;
 
+import data.DatabaseManager;
+
 public class Screen extends JFrame implements Renderable {
 	private int width;
 	private int height;
 	private Scene scene;
 	private RenderBehaviour rb;
+	public DatabaseManager dbm;
 	
-	public Screen( String title) {
+	public Screen( String title, DatabaseManager dbm) {
 		//init
 		super( title);
 		width = 800;
 		height = 600;
 		rb = new RenderBehaviour();
+		this.dbm = dbm;
 		
 		//frame properties
 		//800x600, centered
