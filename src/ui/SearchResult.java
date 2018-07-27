@@ -32,7 +32,7 @@ public class SearchResult extends KangalPanel {
 		selectButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                
+                playerSelected( p);
             }
         });
 
@@ -43,7 +43,7 @@ public class SearchResult extends KangalPanel {
 		setPreferredSize( new Dimension(600, 40));
 	}
 	
-	public void playerSelected() {
-		//parent.playerSelected();
+	public void playerSelected( Player p) {
+		//parent.playerSelected( Player p);
 	}
 }

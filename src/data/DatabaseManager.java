@@ -7,18 +7,20 @@ public class DatabaseManager {
 	private CreateBehaviour cb;
 	private SearchBehaviour sb;
 	private LoadBehaviour lb;
+	private Database db;
 	
 	public DatabaseManager() {
-		cb = new CreateBehaviour(this);
-		sb = new SearchBehaviour(this);
-		lb = new LoadBehaviour(this);
+		db = new Database();
+		cb = new CreateBehaviour(db);
+		sb = new SearchBehaviour(db);
+		lb = new LoadBehaviour(db);
 	}
 	
 	public void createPlayer( Player p) {
 		cb.perform( p);
 	}
 	
-	public List<Player> searchPlayer( String field, Object value, SearchOperator op) {
+	public List<Player> searchPlayer( String field, int value, SearchOperator op) {
 		try {
 			return sb.perform(field, value, op);
 		} catch (IllegalArgumentException e) {
@@ -28,9 +30,8 @@ public class DatabaseManager {
 		return null;
 	}
 	
-	public List<Player> loadPlayers( String s)
+	public void loadPlayers( String s)
 	{
-		lb.perform(s);
-		return null;
+		lb.perform(db);
 	}
 }

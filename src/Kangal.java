@@ -15,7 +15,7 @@ public class Kangal {
 		SoccerPlayer p = new SoccerPlayer("Robinho", LocalDate.of(1980, Month.JANUARY, 25), Nationality.TURKEY);
 		
 		//set profile picture for the player
-		p.setPicture( new KangalPicture("image.jpeg")); //create a KangalPicture instance from image path
+		p.setPicture( new KangalPicture("robinho.jpeg")); //create a KangalPicture instance from image path
 		
 		DatabaseManager dbm = new DatabaseManager();
 		dbm.createPlayer(p);
